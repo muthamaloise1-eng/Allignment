@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<table>
+    <!--Caption adds title to a table-->
+  <caption>Our Pets</caption>
+  <thead>
+    <tr>
+      <!-- Column Headers -->
+      <th>Name</th>
+      <th>Age</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nora</th> <!-- Row Header -->
+      <td>5</td>
+      <td>Dog</td>
+    </tr>
+    <tr>
+      <th>Gino</th> <!-- Row Header -->
+      <td>2</td>
+      <td>Cat</td>
+    </tr>
+  </tbody>
+</table>
+
+      <!--Scope determines whether a header is a column header or a row header-->
+      <!--Here is an example with scope-->
+      <!--Nora and Gino have scope of row-->
+
+<table>
+  <caption>Our Pets</caption>
+  <thead>
+    <tr>
+      <!-- Now they have scope -->
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Nora</th>
+      <td>5</td>
+      <td>Dog</td>
+    </tr>
+    <tr>
+      <th scope="row">Gino</th>
+      <td>2</td>
+      <td>Cat</td>
+    </tr>
+  </tbody>
+</table>
+
+        <!--Scope can also be applied when row or column data spans across multiple cells-->
+        <!--Here is an example-->
+<table>
+  <tbody>
+    <tr>
+      <td></td>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="row">Dogs</th>
+      <th scope="row">Nora</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th scope="row">Gino</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="row">Cats</th>
+      <th scope="row">Lulu</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th scope="row">Elizabeth</th>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

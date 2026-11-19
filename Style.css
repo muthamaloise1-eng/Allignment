@@ -1,0 +1,12 @@
+body {
+    background-color: blue;
+    color: blueviolet;
+    padding: 10px;
+    justify-content: space-around;
+}
+headrder-content {
+   background-color: antiquewhite;
+   justify-content: just;
+   padding: 10px;
+
+}

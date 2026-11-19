@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object model</title>
+</head>
+<body>
+    <button>Hello</button>
+
+    <script>
+
+        console.log(document.title);
+        document.title = 'DOM';
+//This shows us that we can have html inside the javascript beccause DOM allows us to combine them together
+        console.log(document.body);
+        console.log(document.body.innerHTML)
+//this shows whats in script inside the javascript
+        console.log(document.body.innerScript)
+
+        /*document.body.innerHTML = 'hello';
+        document.title = 'Good job!';*/
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+    <body>
+        
+        
+        
+        <script> 
+                /* 
+                const product = {
+                    name: 'shirt',
+                    price: 1090
+                
+                }
+                console.log(product);
+                console.log(product.name);
+                console.log(product.price);
+                */
+                /*changing value name
+
+                product.name = 'cotton socks'; 
+                console.log(product); 
+                */
+                /*Adding value to an object along with the property
+
+                
+                product.newProperty  = true;
+                console.log(product);
+                
+                /*Removing property
+
+                delete product.newProperty;
+                console.log(product);
+
+                */
+
+            const product2 = {
+                name: 'shirt',
+                "delivery-time": '1 day',
+            /*Inside an object we can save any type of value*/
+                rating: {
+                    stars: 4.5,
+                    count: 100
+                },
+            //we can add a function in an object 
+                fun: function function1(){
+                console.log(`function inside object`)
+                }
+            }
+            
+            console.log(product2);
+            //Dot notation helps us access only one object
+            console.log(product2.name);
+            console.log(product2['name']);
+            console.log(product2.rating.stars);
+            //Branket notation - lets us use properties that dont work with dot notation 
+            console.log(product2['delivery-time']);
+            //To accessing the function inside the object
+            product2.fun();
+
+            //saving function inside an object its called Method
+            /*
+            built in object:JSON
+                            Local storage
+                    1) JSON - Javascript Object Notation. They must have double quotes not unlike javasccript object and also doesnt surport functions becausse it has less featurres.
+                    example:
+                    
+                    {
+                    "name": "shirt",
+                    "delivery-time": "1 day"
+                    rating: {
+                        "stars": 4.5,
+                        "count": 100
+                    }
+                    }
+            */              
+                //converting Javaascript Object to JSON
+                //converting product2 to object
+            
+            console.log(JSON.stringify(product2));
+            
+                //Converting JSON to Javascript we use JSON.parse
+            const jsonstring = JSON.stringify(product2);
+                //now converting
+            console.log(JSON.parse(jsonstring));
+        
+
+                //2)Local storage  - is used to save values more permanently.
+            localStorage.setItem('message', 'hello');
+                //it has run all the code but the string is saved into the local storage....they only surport strings
+                //Getting the value out of loacal storage to  display in the console
+            console.log(localStorage.getItem('message'));
+    
+
+                //Auto boxing
+                //legth shows how many letters does the word hello have. and touppercase displays hello in capital lettres
+            console.log('hello'.length);
+            console.log('hello'.toUpperCase());
+        
+
+                //objects are refrences 
+            const object1 = {
+                message: 'hello'
+            }
+                //Making refrence that points to the object(copy by refrence)
+            const object2 = object1;
+
+            object1.message = 'Good job!';
+            console.log(object1);
+            console.log(object2);
+
+                //we cant compare objects directly
+            const object3 = {
+                message: 'Good job!'
+            };
+            console.log(object3 ===object1);
+                //It says false because objects are refrences and this code compares the values inside the object
+
+            console.log(object2 === object1);
+                //it will say true beccause object2 has the ssame refrence as object1,,,they poinr=t to the same object in the computers memory thats because of copy by refrence which happen on line 110 
+                /*shortcuts used: destracturing
+                                  shorthand property
+                                  shorthand Method
+                */
+                //1) destracturing(shortcut) - easire way to take properties ouat of an object
+            const object4 = {
+                message: 'Good job!',
+                price: 800
+            };
+            //we wnt to take the message property out of the object
+            //(const message = object4.message;) this is the message we have cut short to show destructuring
+                ///this is where destructuring is comming in
+            const {message, price} = object4;
+            console.log(message);
+            console.log(price);
+
+        </script>
+    </body>
+</html>
